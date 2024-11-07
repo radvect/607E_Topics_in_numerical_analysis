@@ -11,10 +11,10 @@ for i = 1:length(h_values)
     Dxx = spdiags([e (-2*e - h*h*e) e], [-1 0 1], m, m);
 
 
-    Dxx(1,1) = 1+h*h;
-    Dxx(m,m) = 1+h*h;
-    Dxx(1,2) =1;
-    Dxx(m, m-1)=1;
+    Dxx(1,1) = -(2+h*h);;
+    Dxx(m,m) = -(2+h*h);;
+    Dxx(1,2) =0;
+    Dxx(m, m-1)=0;
     %disp(Dxx)
     
     Dxx = Dxx / h^2;
