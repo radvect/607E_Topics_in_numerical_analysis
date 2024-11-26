@@ -1,0 +1,13 @@
+N = 65536;
+SIN_TABLE = zeros(1, N, 'single');
+for i=1:1:N
+    sin_value = sin((i-1) * (2*pi) / N);
+    if(i==N)
+        class(sin_value)
+    end
+    SIN_TABLE(i) = single(sin_value); 
+end
+
+SIN_TABLE(1)
+class(SIN_TABLE(1))
+SIN_TABLE(N)
