@@ -9,7 +9,7 @@ for idx = 1:length(h_values)
     k = 0.01* k_factor * h^2
     
     %/2/(k_const/C);
-    x = (h:h:1)';
+    x = (0:h:1)';
     N = length(x);
     u0 = @(x) cos(2*pi*x);
     u = u0(x);
